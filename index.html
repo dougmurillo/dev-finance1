@@ -2,9 +2,9 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dev.finance$</title>
+
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,32 +20,42 @@
 
             <div class="card">
                 <h3>
-                    <span>Entradas</span>
+                    <span>
+                        Entradas
+                    </span>
                     <img src="./img/income.svg" alt="Imagem de entradas">
                 </h3>
-                    <p id="incomeDisplay">R$ 5.000,00</p>
+                    <p id="incomeDisplay">R$ 0,00</p>
             </div>
 
             <div class="card">
                     <h3>
-                        <span>Saídas</span>
+                        <span>
+                            Saídas
+                        </span>
                         <img src="./img/expense.svg" alt="Imagem de saídas">
                     </h3>
-                    <p id= "expenseDisplay">R$ 2.000,00</p>
+                    <p id= "expenseDisplay">R$ 0,00</p>
             </div>
             <div class="card total">
                     <h3>
-                        <span>Total</span>
+                        <span>
+                            Total
+                        </span>
                         <img src="./img/total.svg" alt="Imagem de entradas">
                     </h3>
-                    <p id="totalDisplay">R$ 3.000,00</p>
+                    <p id="totalDisplay">R$ 0,00</p>
             </div>
 
         </section>
-        <section>
-            <h2 class="sr-only">Transações</h2>
 
-            <a href="#" onclick="Modal.open()" class="button new">+ nova transação</a>
+        <section id="transaction">
+            <h2 
+            class="sr-only">
+            </h2>
+
+            <a href="#" 
+            onclick="Modal.open()" class="button new">+ Nova Transação</a>
 
             <table id="data-table">
                 <thead>
@@ -56,18 +66,17 @@
                         <th></th>
                     </tr>
                 </thead>
-                <tbody>
-                    
+                <tbody> 
                 </tbody>
             </table>
         </section>
     </main>
 
-    <div class="modal-overlay active ">
+    <div class="modal-overlay">
         <div class="modal">
                <div id="form">
                    <h2>Nova Transação</h2>
-                   <form action="">
+                   <form action="" onsubmit="Form.submit(event)">
                        <div class="input-group">
                            <label class="sr-only" for="description">Descrição</label>
                            <input type="text" id="description" name= "description"
@@ -88,7 +97,7 @@
                     </div>
 
                     <div class="input-group actions">
-                        <a  href="#" onclick="Modal.close()"class="button cancel">Cancelar</a>
+                        <a onclick="Modal.close()"href= '#'class="button cancel">Cancelar</a>
                         <button>Salvar</button>
                     </div>    
 
@@ -99,11 +108,7 @@
 
     <footer><p>dev.finance$</p></footer>
 
-    <script src="./scripts.js">
+    <script src="./scripts.js"></script>
 
-    
-
-    </script>
-
-</body>
+    </body>
 </html>
